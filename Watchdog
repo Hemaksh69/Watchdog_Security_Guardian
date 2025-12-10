@@ -1,0 +1,59 @@
+#!/bin/bash
+echo "----------- Welcome To WatchDog Your Secret Guardian -----------"
+sleep 2
+echo "->Scanning embedded code for secrets...... "
+echo "==============================================================="
+sleep 1
+
+USER_CODE='->const_password ="admin123"
+AWS_KEY= "AKIA1234567890ABCD"
+email = "test@example.com"
+'
+
+echo "$USER_CODE"
+
+THREATS=0
+
+scan() {
+    local pattern="$1"
+    local label="$2"
+    
+    if echo "$USER_CODE" | grep -qE "$pattern"; then
+        echo
+        echo "SECRET DETECTED: $label"
+        echo "Location(s):"
+        echo "$USER_CODE" | grep -nE "$pattern"
+        echo "---------------------------------"
+        ((THREATS++))
+    fi
+}
+
+scan "AKIA[0-9A-Z]{16}" "AWS Access Key"
+scan "ASIA[0-9A-Z]{16}" "AWS Temp Key"
+scan "AIza[0-9A-Za-z\-_]{35}" "Google API Key"
+scan "-----BEGIN PRIVATE KEY-----" "Private Key"
+scan "password\s*=\s*['\"].+" "Hardcoded Password"
+scan "token\s*=\s*['\"].+" "Hardcoded Token"
+scan "[A-Za-z0-9+/]{20,}={0,2}" "Base64 String"
+scan "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[A-Za-z]{2,}" "Email Address"
+
+sleep 2
+echo
+echo "----------- RESULT -----------"
+
+if [ $THREATS -eq 0 ]; then
+    echo "Congratulations no threats were found"
+else
+    echo "Total Secrets Found: $THREATS"
+    echo "⚠️ RISK LEVEL: HIGH – ALERT TRIGGERED"
+    echo
+    echo "===== RECOMMENDATIONS ====="
+    echo "- Remove hardcoded secrets"
+    echo "- Rotate leaked credentials"
+    echo "- Use environment variables"
+    echo "- Use GitHub Secrets or Vault"
+    echo "- Add pre-commit hooks"
+    echo
+    echo "===== MOCK ALERT SENT ====="
+    echo "📩 Secret leak detected in scanned file"
+fi
