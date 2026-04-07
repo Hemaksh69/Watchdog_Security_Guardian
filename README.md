@@ -2,7 +2,7 @@
 
 **[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)**
 **[![Stars](https://img.shields.io/github/stars/Hemaksh69/watchdog_security_guardian?style=social)](https://github.com/Hemkash69/watchdog_security_guardian/stargazers)**
-**[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/yourusername/watchdog_security_guardian/issues)**
+**[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/Hemaksh69/watchdog_security_guardian/issues)**
 
 A **lightweight, regex-powered Bash script** that scans your codebase for **hardcoded secrets**, helping you prevent accidental credential leaks before they reach production. Think of it as your **first line of defense** against accidental data exposure.
 
@@ -44,7 +44,7 @@ A **lightweight, regex-powered Bash script** that scans your codebase for **hard
 ### **Quick Start (Copy-Paste Friendly!)**
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/watchdog_security_guardian.git
+git clone https://github.com/Hemaksh69/watchdog_security_guardian.git
 cd watchdog_security_guardian
 
 # Make the script executable
