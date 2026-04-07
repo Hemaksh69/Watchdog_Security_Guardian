@@ -1,54 +1,54 @@
 # 🚨 Watchdog Security Guardian
 
-**[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)**
-**[![Stars](https://img.shields.io/github/stars/Hemaksh69/watchdog_security_guardian?style=social)](https://github.com/Hemaksh69/watchdog_security_guardian/stargazers)**
-**[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/Hemaksh69/watchdog_security_guardian/issues)**
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Stars](https://img.shields.io/github/stars/Hemaksh69/Watchdog_Security_Guardian?style=flat)](https://github.com/Hemaksh69/Watchdog_Security_Guardian/stargazers)
+[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](https://github.com/Hemaksh69/Watchdog_Security_Guardian/issues)
 
-A **lightweight, regex-powered Bash script** that scans your codebase for **hardcoded secrets**, helping you prevent accidental credential leaks before they reach production. Think of it as your **first line of defense** against accidental data exposure.
-
----
-
-## ✨ **Why Watchdog Security Guardian?**
-
-### 🔐 **Protects Against:**
-✅ **API Keys** (AWS, Google, Stripe, etc.)
-✅ **Passwords & Tokens** (hardcoded in config files, scripts, or code)
-✅ **Private Keys** (SSH, PGP, or encryption keys)
-✅ **Base64 Encoded Secrets** (often used for obfuscation)
-✅ **Exposed Email Addresses** (potential phishing targets)
-✅ **Database Credentials** (MySQL, PostgreSQL, MongoDB)
-
-### 🚀 **Key Features:**
-🔍 **Fast & Lightweight** – No heavy dependencies, runs in seconds.
-📊 **Clear Threat Reporting** – Shows detected secrets with risk levels.
-💡 **Security Recommendations** – Suggests fixes for found issues.
-📝 **Mock Alerts** – Simulates real-world security notifications.
-🔄 **Easy to Extend** – Simple regex-based detection for custom patterns.
+A lightweight, regex-powered Bash script designed to scan codebases for hardcoded secrets. Watchdog helps catch accidental credential leaks before they are committed, acting as a simple but effective security audit tool for your local environment.
 
 ---
 
-## 🛠️ **Tech Stack**
-- **Language:** Bash (v4.0+)
-- **Detection Method:** Regex-based pattern matching
-- **Dependencies:** None (pure Bash)
-- **Works On:** Linux, macOS, WSL (Windows Subsystem for Linux)
+## 🔐 What it detects:
+Watchdog scans your files against patterns for common sensitive data, including:
+
+* **API Keys:** AWS, Google, Stripe, and generic high-entropy strings.
+* **Credentials:** Hardcoded passwords, database URIs (MongoDB, MySQL, Postgres).
+* **Private Keys:** SSH, PGP, and general PEM blocks.
+* **Encoded Data:** Base64 obfuscated secrets.
+* **Leaks:** Exposed email addresses and internal configuration tokens.
 
 ---
 
-## 📦 **Installation**
+## 🚀 Key Features:
+* **Zero Dependencies:** Runs on pure Bash. No need for Python, Node.js, or external libraries.
+* **High Speed:** Uses optimized `grep` and `find` logic to scan large directories in seconds.
+* **Clear Reporting:** Outputs color-coded results directly to your terminal.
+* **Risk Assessment:** Categorizes findings to help you prioritize what to fix first.
+* **Customizable:** Easily add your own regex patterns to the script logic.
 
-### **Prerequisites**
-- A **Bash-compatible shell** (GNU Bash recommended)
-- **Basic file permissions** (read access to your codebase)
+---
 
-### **Quick Start (Copy-Paste Friendly!)**
+## 🛠️ Tech Stack
+* **Language:** Bash (v4.0+)
+* **Logic:** Regex-based pattern matching
+* **Compatibility:** Linux, macOS, WSL
+
+---
+
+## 📦 Installation & Usage
+
+### Prerequisites
+* A Bash-compatible shell (GNU Bash is recommended).
+* Standard Unix utilities (`grep`, `find`, `sed`).
+
+### Quick Start
 ```bash
 # Clone the repository
-git clone https://github.com/Hemaksh69/watchdog_security_guardian.git
-cd watchdog_security_guardian
+git clone [https://github.com/Hemaksh69/Watchdog_Security_Guardian.git](https://github.com/Hemaksh69/Watchdog_Security_Guardian.git)
+cd Watchdog_Security_Guardian
 
 # Make the script executable
-chmod +x watchdog.sh
+chmod +x Watchdog
 
 # Run the scanner on a file or directory
-./watchdog.sh path/to/your/codebase
+./Watchdog path/to/your/codebase
