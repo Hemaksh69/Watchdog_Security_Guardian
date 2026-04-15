@@ -18,7 +18,7 @@
 
 <br/>
 
-[Overview](#-overview) · [Key Capabilities](#-key-capabilities) · [Quick Start](#-quick-start) · [CI/CD Integration](#-cicd-integration)
+[Overview](#-overview) · [Key Capabilities](#-key-capabilities) · [Quick Start](#-quick-start) 
 
 ---
 
