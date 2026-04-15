@@ -11,8 +11,7 @@
 [![Code Quality](https://img.shields.io/badge/Code%20Quality-A+-blue?style=for-the-badge&color=2ea44f)](https://github.com/Hemaksh69/Watchdog_Security_Guardian)
 [![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen?style=for-the-badge&color=2ea44f)](https://github.com/Hemaksh69/Watchdog_Security_Guardian/pulls)
 [![Platform](https://img.shields.io/badge/Platform-Linux%20%7C%20macOS%20%7C%20WSL-informational?style=for-the-badge&color=007ec6)](https://github.com/Hemaksh69/Watchdog_Security_Guardian)
-[![Security Scan CI](https://github.com/Hemaksh69/Watchdog_Security_Guardian/actions/workflows/main.yml/badge.svg)](https://github.com/Hemaksh69/Watchdog_Security_Guardian/actions/workflows/main.yml)
-
+[![Secret Detection Scan](https://github.com/Hemaksh69/Watchdog_Security_Guardian/actions/workflows/secret-scan.yml/badge.svg)](https://github.com/Hemaksh69/Watchdog_Security_Guardian/actions/workflows/secret-scan.yml)
 <br/>
 
 > *"The most effective security gate is the one closest to the developer."*
